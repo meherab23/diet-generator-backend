@@ -5,6 +5,7 @@ const dietController = require('../controllers/dietController.js');
 
 // Public Routes
 router.post('/create', dietController.creatDiet);
+router.patch('/update', dietController.updateDiet);
 router.get('/get', dietController.getAllDiets);
 
 module.exports = router;

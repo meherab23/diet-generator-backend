@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema(
   {
     email: { type: String, unique: true, lowercase: true, trim: true },
     password: { type: String, required: true },
-    username: { type: String, required: true },
-    name: { type: String, },
-    phone: { type: String,},
+    username: { type: String, unique: true, required: true },
+    name: { type: String, required: false },
+    phone: { type: String, unique: true , default: ''},
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     image: { type: String }, // URL for profile picture
     created_at: { type: Date, default: Date.now },
