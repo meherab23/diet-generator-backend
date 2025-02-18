@@ -30,7 +30,26 @@ const DietSchema = new mongoose.Schema({
         required: true
     },
     routine: {
-        type: Array,
+        type: [
+            {
+                day: {
+                    type: String,
+                    required: true
+                },
+                breakfast: {
+                    type: String,
+                    required: true
+                },
+                lunch: {
+                    type: String,
+                    required: true
+                },
+                dinner: {
+                    type: String,
+                    required: true
+                }
+            }
+        ],
         required: true
     }
 });
