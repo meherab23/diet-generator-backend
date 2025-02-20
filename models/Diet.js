@@ -47,7 +47,11 @@ const DietSchema = new mongoose.Schema({
                 dinner: {
                     type: String,
                     required: true
-                }
+                },
+                status: {
+                    type: Boolean,
+                    default: false
+                }    
             }
         ],
         required: true

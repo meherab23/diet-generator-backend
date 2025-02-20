@@ -44,31 +44,10 @@ const authRoutes = require('./routes/authRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
 const userRoutes = require('./routes/userRoutes.js');
 const dietRoutes = require('./routes/dietRoutes.js');
-// const categoryRoutes = require('./routes/categoryRoutes');
-// const butcheryRoutes = require('./routes/butcheryRoutes');
-// const productRoutes = require('./routes/productRoutes');
-// const eventRoutes = require('./routes/eventRoutes');
-// const orderRoutes = require('./routes/orderRoutes');
-// const promoCodeRoutes = require('./routes/promoCodeRoutes');
-// const weeklyOfferRoutes = require('./routes/weeklyOfferRoutes');
-// const bannerAdsRoutes = require('./routes/bannerAdsRoutes');
-// const productAdsRoutes = require('./routes/productAdsRoutes');
-// const paymentRoutes = require('./routes/paymentRoutes');
-// Use routes
 app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/diet', dietRoutes);
-// app.use('/api/butchery', butcheryRoutes);
-// app.use('/api/product', productRoutes);
-// app.use('/api/event', eventRoutes);
-// app.use('/api/order', orderRoutes);
-// app.use('/api/category', categoryRoutes);
-// app.use("/api/promocodes", promoCodeRoutes);
-// app.use('/api/weeklyoffers', weeklyOfferRoutes);
-// app.use('/api/bannerads', bannerAdsRoutes);
-// app.use('/api/productads', productAdsRoutes);
-// app.use('/api/payment', paymentRoutes);
 
 // Handle 404 for undefined routes
 app.use((req, res, next) => {

@@ -4,11 +4,11 @@ const bcrypt = require("bcryptjs");
 // Update user information
 exports.updateUser = async (req, res) => {
     try {
-      const { userId, phone, name } = req.body;
+      const { userId, phone, name, image } = req.body;
   
       const updatedUser = await User.findByIdAndUpdate(
         userId,
-        { phone: phone, name: name },
+        { phone: phone, name: name, image: image },
         { new: true }
       );
       

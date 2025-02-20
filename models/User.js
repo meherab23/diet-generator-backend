@@ -6,11 +6,11 @@ const userSchema = new mongoose.Schema(
   {
     email: { type: String, unique: true, lowercase: true, trim: true },
     password: { type: String, required: true },
-    username: { type: String, unique: true, required: true },
+    username: { type: String, required: true },
     name: { type: String, required: false },
-    phone: { type: String, unique: true , default: ''},
+    phone: { type: String, default: null },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
-    image: { type: String }, // URL for profile picture
+    image: { type: String, default: null }, // URL for profile picture
     created_at: { type: Date, default: Date.now },
   },
   { timestamps: true }
