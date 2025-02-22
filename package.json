@@ -1,10 +1,13 @@
 {
-  "name": "ddiet-generator",
+  "homepage": "https://meherab23.github.io/diet-generator",
+  "name": "diet-generator",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "nodemon server.js"
   },
   "keywords": [],
@@ -26,5 +29,8 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.10.0",
     "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
